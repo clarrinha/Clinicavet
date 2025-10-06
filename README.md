@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Clinica-vet
 =======
 # Sistema de gerencimento para uma Clinica veterinaria
@@ -18,7 +17,7 @@ Este é um projeto de uma aplicação para gerenciar uma clínica veterinária, 
 
 ## Instalação
 
-1- Clone o repositorio: https://github.com/Tiagodeev/Clinica-veterinaria-java.git
+1- Clone o repositorio: https://github.com/clarrinha/Clinicavet
 
 2- Baixe o banco de dados do link: (pendente)
 
@@ -28,15 +27,12 @@ Este é um projeto de uma aplicação para gerenciar uma clínica veterinária, 
 
 
 ## Diagrama de casos de uso:
-![863e7ad4-b252-44f5-892b-95b269877f50](https://github.com/user-attachments/assets/e2cdc100-7451-4afc-add2-d6c522494c60)
+![Diagrama de casos de uso](C:\Users\maria clara\Desktop\PROJECT AUGUSTO ED\out\diagrama_classes)
 
 ## Diagrama de classes:
-![Diagrama de classescv_page-0001](https://github.com/user-attachments/assets/fdec55b8-a7d5-490c-94b0-50410d3dbb88)
+![Diagrama de classes](C:\Users\maria clara\Desktop\PROJECT AUGUSTO ED\out\diagrama_vt)
 
 
-## Autores
+## Autora
 
-- Fabio Henrique - https://github.com/ztrug
-- Tiago melo - https://github.com/tiagodeev
-- Joserlan gonçalves -https://github.com/joserlan08
->>>>>>> 6cd7785 (Primeiro commit clinicia veterinaria - versao inicial)
+- Maria Clara Nascimento Silva (https://github.com/clarrinha)

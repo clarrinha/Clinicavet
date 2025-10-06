@@ -2,12 +2,12 @@
 ' Define a direção do layout da esquerda para a direita
 left to right direction
 
-' Define os atores
+
 actor Veterinario
 actor Administrador
 actor Atendente
 
-' Define o retângulo que representa o sistema (Clínica Veterinária)
+
 rectangle "Clínica Veterinária" {
   usecase UC1 as "Agendar consulta,
   exame, cirurgia,
@@ -24,7 +24,7 @@ rectangle "Clínica Veterinária" {
   usecase UC7 as "receber pagamento"
 }
 
-' Define as associações entre os atores e os casos de uso
+'  atores e os casos de uso
 Veterinario -- UC1
 Veterinario -- UC2
 Veterinario -- UC4
