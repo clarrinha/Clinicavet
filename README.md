@@ -27,10 +27,10 @@ Este é um projeto de uma aplicação para gerenciar uma clínica veterinária, 
 
 
 ## Diagrama de casos de uso:
-![Diagrama de casos de uso](out/diagrama_classes.png)
+![Diagrama de classes](out/diagrama_classes.png)
 
 ## Diagrama de classes:
-![Diagrama de classes](out/diagrama_vt.png)
+![Diagrama de casos de uso](out/diagrama_vt.png)
 
 
 ## Autora
