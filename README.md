@@ -13,7 +13,8 @@ Este é um projeto de uma aplicação para gerenciar uma clínica veterinária, 
 
 ## Tecnologias Utilizadas
 -java
--mysql
+-Banco de dados: Pendente
+
 
 ## Instalação
 
