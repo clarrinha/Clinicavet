@@ -1,0 +1,87 @@
+@startuml
+
+
+skinparam classAttributeIconSize 0
+
+
+
+class Funcionario {
+  - nome: String
+  - cargo: String
+  - telefone: String
+  - email: String
+  + getters()
+  + setters()
+}
+
+class Atendente {
+  + agendarServico()
+  + verAgenda()
+  + cadastrarCliente()
+  + cadastrarAnimal()
+}
+
+class Veterinario {
+  - crm: String
+  + agendarServico()
+  + realizarServico()
+  + verAgenda()
+  + criarReceitaMedica()
+}
+
+class Administrador {
+  + RegistroFinanceiros()
+  + verAgenda()
+}
+
+
+class "Cliente(dono)" as Cliente {
+  - nome: String
+  - telefone: String
+  - email: String
+  + getters()
+  + setters()
+}
+
+
+class "Animal(paciente)" as Animal {
+  - nome: String
+  - idade: int
+  - especie: String
+  + getters()
+  + setters()
+}
+
+class Servico {
+  - tipo: String
+  - descrição: String
+  - preço: float
+  - data: date
+  + getters()
+  + setters()
+}
+note right of Servico::tipo
+  ex: consulta, exame,
+  vacinação, cirurgia
+end note
+
+
+
+Funcionario <|-- Atendente
+Funcionario <|-- Veterinario
+Funcionario <|-- Administrador
+
+
+Atendente <--> Cliente
+Veterinario <--> Servico
+
+' Um Cliente pode ter 0 ou muitos Animais
+Cliente "1" -- "0..*" Animal
+
+
+
+' Um Serviço é para 1 Animal, e um Animal pode ter 0 ou muitos Serviços
+Servico "0..*" -- "1" Animal
+
+
+@enduml

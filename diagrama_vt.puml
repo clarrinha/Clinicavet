@@ -1,0 +1,41 @@
+@startuml
+' Define a direção do layout da esquerda para a direita
+left to right direction
+
+' Define os atores
+actor Veterinario
+actor Administrador
+actor Atendente
+
+' Define o retângulo que representa o sistema (Clínica Veterinária)
+rectangle "Clínica Veterinária" {
+  usecase UC1 as "Agendar consulta,
+  exame, cirurgia,
+  vacinação"
+  usecase UC2 as "realizar serviço
+  agendado(consulta,
+  exame, cirurgia etc)"
+  usecase UC3 as "ver estoque"
+  usecase UC4 as "ver agenda"
+  usecase UC5 as "criar receitas de
+  medicamentos"
+  usecase UC6 as "gerar registros
+  financeiros/serviços"
+  usecase UC7 as "receber pagamento"
+}
+
+' Define as associações entre os atores e os casos de uso
+Veterinario -- UC1
+Veterinario -- UC2
+Veterinario -- UC4
+Veterinario -- UC5
+
+Administrador -- UC3
+Administrador -- UC4
+Administrador -- UC6
+
+Atendente -- UC1
+Atendente -- UC4
+Atendente -- UC7
+
+@enduml
