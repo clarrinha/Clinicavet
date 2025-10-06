@@ -27,10 +27,10 @@ Este é um projeto de uma aplicação para gerenciar uma clínica veterinária, 
 
 
 ## Diagrama de casos de uso:
-![Diagrama de casos de uso](C:\Users\maria clara\Desktop\PROJECT AUGUSTO ED\out\diagrama_classes)
+![Diagrama de casos de uso](out/diagrama_classes.png)
 
 ## Diagrama de classes:
-![Diagrama de classes](C:\Users\maria clara\Desktop\PROJECT AUGUSTO ED\out\diagrama_vt)
+![Diagrama de classes](out/diagrama_vt.png)
 
 
 ## Autora
