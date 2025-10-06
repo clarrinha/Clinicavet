@@ -1,5 +1,5 @@
 # Clinica-vet
-=======
+===EM ANDAMENTO===
 # Sistema de gerencimento para uma Clinica veterinaria
 Este é um projeto de uma aplicação para gerenciar uma clínica veterinária, desenvolvida em Java. A aplicação atende tanto os funcionários quanto os proprietários de animais, proporcionando um atendimento mais eficiente e organizado. O sistema  permite o cadastro de animais, agendamento de consultas e gestão de dados.
 
