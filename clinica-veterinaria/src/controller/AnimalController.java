@@ -1,52 +1,42 @@
 package controller;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
-import database.DatabaseConnection;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AnimalController {
 
-	private Connection connection;
+    private List<Animal> animais;
 
-	public AnimalController() {
-        connection = DatabaseConnection.getConnection();  // Conexão com o banco
+    public AnimalController() {
+        animais = new ArrayList<>();
     }
-	
 
-    // Método para cadastrar
-    public void cadastrarFuncionario(String nome, String especie) {
-        String sql = "INSERT INTO funcionario (nome, cargo) VALUES (?, ?)";
+    public static class Animal {
+        private String nome;
+        private String especie;
 
-        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
-            stmt.setString(1, nome);
-            stmt.setString(2, especie);
-            stmt.executeUpdate();
-            System.out.println("Cadastro de funcionário realizado com sucesso!");
-        } catch (SQLException e) {
-            System.out.println("Erro ao cadastrar funcionário: " + e.getMessage());
+        public Animal(String nome, String especie) {
+            this.nome = nome;
+            this.especie = especie;
+        }
+
+        public String getNome() { return nome; }
+        public String getEspecie() { return especie; }
+    }
+
+    public void cadastrarAnimal(String nome, String especie) {
+        animais.add(new Animal(nome, especie));
+        System.out.println("Cadastro de animal realizado com sucesso!");
+    }
+
+    public void listarAnimais() {
+        if (animais.isEmpty()) {
+            System.out.println("Nenhum animal cadastrado.");
+            return;
+        }
+        for (int i = 0; i < animais.size(); i++) {
+            Animal a = animais.get(i);
+            System.out.println("ID: " + i + ", Nome: " + a.getNome() + ", Espécie: " + a.getEspecie());
         }
     }
-
-    // Método para listar
-    public void listarFuncionarios() {
-        String sql = "SELECT * FROM veterinairo";
-
-        try (Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(sql)) {
-
-            while (resultSet.next()) {
-                int id = resultSet.getInt("id_funcionario");
-                String nome = resultSet.getString("nome");
-                System.out.println("ID: " + id + ", Nome: " + nome);
-            }
-        } catch (SQLException e) {
-            System.out.println("Erro ao listar funcionários: " + e.getMessage());
-        }
-    }
-	
-	
 }
